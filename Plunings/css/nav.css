@@ -1,0 +1,47 @@
+:root {
+    --color--items: #ffffff;
+}
+
+.nav-item {
+    font-family: georgia, serif;
+    color: var(--color--items);
+    font-size: 20px;
+    height: 10%;
+    padding-left: 2%;
+    width: 4rem;
+}
+
+.cerrars {
+    width: 8rem;
+}
+
+nav ul li a {
+    color: var(--color--items);
+    text-decoration: none;
+    width: 100%;
+}
+
+nav ul {
+    justify-content: flex-end;
+    list-style: none;
+    overflow: hidden;
+}
+
+nav ul li a:hover {
+    color: tomato;
+    text-decoration: none;
+}
+
+.bg-blue {
+    background-color: #224FAF !important;
+}
+
+.navbar-brand {
+    width: 8% !important;
+    height: 100% !important;
+}
+
+.container {
+    width: 1032px !important;
+    height: 20%;
+}
