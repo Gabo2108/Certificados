@@ -31,7 +31,7 @@ function getFileList(folder) {
   function callback_pdf(data,folder){
     let table = document.getElementById("tb-arch");
     let tableContent = "";
-    if(data.length > 1){
+    if(data.length > 0){
       data.forEach(function(element) {
         tableContent += "<tr>";
         tableContent += "<td class='text-center'><div class='circle circle-sm bg-light'><span class='fe fe-file fe-16 text-muted'></span></div><span class='dot dot-md bg-warning mr-1'></span></td>";
@@ -48,7 +48,7 @@ function getFileList(folder) {
   function callback_rar(data,folder){
     let table = document.getElementById("tb-arch");
     let tableContent = "";
-    if(data.length > 1){
+    if(data.length > 0){
       data.forEach(function(element) {
         tableContent += "<tr>";
         tableContent += "<td class='text-center'><div class='circle circle-sm bg-light'><span class='fe fe-archive fe-16 text-muted'></span></div><span class='dot dot-md bg-warning mr-1'></span></td>";
