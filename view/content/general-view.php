@@ -2,10 +2,14 @@
 require_once "./controller/login.controlador.php";
 
 $cerrar = new LoginControlador();
+if (!isset($_SESSION['rol'])) {
+    $url = SERVERURL . "salir";
+    echo $urllocation = '<script> window.location = "' . $url . '"</script>';
+  }
 if ($_SESSION['rol'] != 1) {
     $url = SERVERURL . "permiso";
     echo $urllocation = '<script> window.location = "' . $url . '"</script>';
-} else { ?>
+} else {echo $_SESSION['rol']; ?>
     <div class="wrapper">
         <main role="main" class="main-content">
             <div class="container-fluid">

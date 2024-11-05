@@ -1,12 +1,3 @@
-<?php
-require_once "./controller/login.controlador.php";
-
-$cerrar = new LoginControlador();
-if (!isset($_SESSION['rol'])) {
-  $url = SERVERURL . "permiso";
-  echo $urllocation = '<script> window.location = "' . $url . '"</script>';
-} else {
-?>
   <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
     <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
       <i class="fe fe-x"><span class="sr-only"></span></i>
@@ -82,5 +73,5 @@ if (!isset($_SESSION['rol'])) {
       </ul>
     </nav>
   </aside>
-<?php }
+<?php 
 ?>

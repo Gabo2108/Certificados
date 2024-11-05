@@ -19,7 +19,7 @@ class LoginControlador extends LoginModelo
 			$_SESSION['nombre'] = $row['doc_nombre'];
 			$_SESSION['rol'] = $row['id_rol'];
 			$_SESSION['id']= $row['id_docente'];
-			$url = SERVERURL . "general/";
+			($_SESSION['rol'] == "1")?$url = SERVERURL . "general/": $url = SERVERURL . "dashboard/";
 			return $urllocation = '<script> window.location = "' . $url. '"</script>';
 
 		}else{
