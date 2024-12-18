@@ -1,7 +1,8 @@
-<?php include 'core/configGeneral.php'; ?>
+<?php 
+	session_name("UIC"); // Set the session name *before* starting it
+	session_start();
 
-<?php
-
+include 'core/configGeneral.php';
 $peticionAjax = false;
 ?>
 <!DOCTYPE html>
@@ -50,7 +51,7 @@ $peticionAjax = false;
 			require_once "./view/content/404-view.php";
 		}
 	else :
-		session_start(["name" => "UIC"]);
+		 
 		require_once "./controller/login.controlador.php";
 		
 		$cerrar = new LoginControlador();

@@ -1,8 +1,8 @@
 <?php
-const SERVER = "localhost";
+const SERVER = "database:3306";
 const DB = "dbcertificados";
-const USER ="root";
-const PASS = "";
+const USER ="jonny";
+const PASS = "123";
 const SGBD = "mysql:host=" . SERVER . ";dbname=" . DB;
 const METHOD     = "AES-256-CBC";
 const SECRET_KEY = '$BP@2017';
