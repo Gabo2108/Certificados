@@ -27,7 +27,7 @@ class ArchivosControlador
     }
     public function Ctr_Explorar_Archivos($folder)
     {
-        $directorPath = DOCUMENTS. "\\" . $folder;
+        $directorPath = DOCUMENTS. "/" . $folder;
         $files = scandir($directorPath);
 
         foreach ($files as $file) {
