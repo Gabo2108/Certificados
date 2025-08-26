@@ -23,8 +23,8 @@ class CertificadoControlador extends mainModel
             'margin_top' => 5,
             'margin_bottom' => 5];
         $mpdf = new \Mpdf\Mpdf($configpag);
-        setlocale(LC_TIME, 'es_VE.UTF-8','esp');
-        $fechactual = strtoupper(strftime(" %d de %B del %Y"));
+        setlocale(LC_TIME, 'es_EC.UTF-8','esp');
+        $fechactual = date(' d.m.Y');
         $NOMBRE=strtoupper($info['est_nombre'].' '.$info['est_apellido']);
         $leyenda=str_replace('%fecha1%',$info['est_fecha_inicio'],'Por aprobar el curso MOOC SOLIDWORKS realizado desde %fecha1% hasta %fecha2% muchas gracias a todos.');
         $leyenda=str_replace('%fecha2%',$info['est_fecha_fin'],$leyenda);
@@ -88,8 +88,8 @@ class CertificadoControlador extends mainModel
             'margin_right' => 5,
             'margin_top' => 5,
             'margin_bottom' => 5];
-        setlocale(LC_TIME, 'es_VE.UTF-8','esp');
-        $fechactual = strtoupper(strftime(" %d de %B del %Y"));
+        setlocale(LC_ALL, 'es_EC.UTF-8','esp');
+        $fechactual = date(' d.m.Y');
         $style='<style>
                 .wrapper {    
                     padding-left:5%;       

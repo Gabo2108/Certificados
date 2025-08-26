@@ -92,7 +92,7 @@
                         </div>
                         <div class="form-group">
                             <label>horas</label>
-                            <input type="text" id="hora" class="form-control" >
+                            <input type="text" id="horas" class="form-control" >
                         </div>
                         <div class="form-group">
                             <label>Codigo</label>

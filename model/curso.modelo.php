@@ -25,4 +25,12 @@ class CursoModelo extends mainModel
         $sql->close();
         $sql = null;
     }   
+    protected function MdlEliminarCurso($id)
+    {
+        $sql = mainModel::conectar()->prepare("DELETE FROM tbl_curso WHERE id_curso= :ide");
+        $sql->execute(array(':ide'=>$id));
+        return $sql;
+        $sql->close();
+        $sql = null;
+    }   
 }

@@ -74,7 +74,7 @@ $(document).on("click", ".btnEditar", function () {
   nombre = fila.find("td:eq(1)").text();
   tipo = fila.find("td:eq(4)").text();
   $("#nombre").val(nombre);
-  $("#hora").val(horas);
+  $("#horas").val(horas);
   $("#codigo").val(codigo);
   $.ajax({
     type: "POST",
