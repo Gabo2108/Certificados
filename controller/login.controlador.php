@@ -6,7 +6,7 @@ if ($peticionAjax) {
 }
 class LoginControlador extends LoginModelo
 {
-	public function CtrIniciarSession()
+	public function CtrIniciarSession() 
 	{
 		$usuario = mainModel::limpiar_cadena($_POST['user']);
 		$password = mainModel::limpiar_cadena($_POST['pass']);
@@ -14,9 +14,8 @@ class LoginControlador extends LoginModelo
 		$respuesta = LoginModelo::MdlIniciarSession($datosLogin);
 		if ($respuesta->rowCount() == 1) {
 			$row = $respuesta->fetch();
-			session_start(["name" => "UIC"]);
 			$_SESSION['apellido'] = $row['doc_apellido'];
-			$_SESSION['nombre'] = $row['doc_nombre'];
+			$_SESSION['usuario'] = $row['doc_usuario']; // Store the username
 			$_SESSION['rol'] = $row['id_rol'];
 			$_SESSION['id']= $row['id_docente'];
 			($_SESSION['rol'] == "1")?$url = SERVERURL . "general/": $url = SERVERURL . "dashboard/";

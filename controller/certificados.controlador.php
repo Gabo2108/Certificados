@@ -69,7 +69,7 @@ class CertificadoControlador extends mainModel
         // Write some HTML code:
         $mpdf->WriteHTML($html);
         // Output a PDF file directly to the browser
-        $savedir=archivos.'\Certificado\\'.$NOMBRE.'_'.$info['cur_nombre'].'.pdf';
+        $savedir=DOCUMENTS.'/Certificado/'.$NOMBRE.'_'.$info['cur_nombre'].'.pdf';
         $mpdf->Output($savedir,'F');
         return (file_exists($savedir)) ? true : 'error';
 
@@ -138,7 +138,7 @@ class CertificadoControlador extends mainModel
         $mpdf->SetDefaultBodyCSS('background-image-resize', 6);
         $mpdf->WriteHTML($html);
         // Output a PDF file directly to the browser
-        $savedir=archivos.'\Rar\temp\\'.$NOMBRE.'_'.$row['cur_nombre'].'.pdf';
+        $savedir=DOCUMENTS.'\Rar\temp\\'.$NOMBRE.'_'.$row['cur_nombre'].'.pdf';
         $mpdf->Output($savedir,'F');
         }
         return (file_exists($savedir)) ? true : 'error';

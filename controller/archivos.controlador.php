@@ -4,7 +4,7 @@ class ArchivosControlador
     public static function Ctr_Explorar_carpetas()
     {
 
-        $ra = scandir(archivos, 2);
+        $ra = scandir(DOCUMENTS, 2);
         return $ra;
     }
     public function Ctr_formatSizeUnits($bytes)
@@ -27,7 +27,7 @@ class ArchivosControlador
     }
     public function Ctr_Explorar_Archivos($folder)
     {
-        $directorPath = archivos . "\\" . $folder;
+        $directorPath = DOCUMENTS. "/" . $folder;
         $files = scandir($directorPath);
 
         foreach ($files as $file) {
@@ -57,11 +57,11 @@ class ArchivosControlador
         date_default_timezone_set("America/Guayaquil");
 
         $zip = new ZipArchive();
-        $carpeta = archivos . "/" . $folder . "/temp";
+        $carpeta = DOCUMENTS. "/" . $folder . "/temp";
 
         $nombre = date("d-m-Y-H-i-s", time());
         // Define la carpeta donde se creará el ZIP
-        $directorio = archivos . "/" . $folder;
+        $directorio = DOCUMENTS . "/" . $folder;
 
         // Crea un nuevo objeto ZipArchive
         $zip = new ZipArchive();
