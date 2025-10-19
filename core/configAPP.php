@@ -1,5 +1,5 @@
 <?php
-const SERVER = "database:3306";
+const SERVER = "localhost";
 const DB = "dbcertificados";
 const USER ="jonny";
 const PASS = "123";

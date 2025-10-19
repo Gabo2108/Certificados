@@ -11,7 +11,7 @@ $(document).on("click", ".repbug", function () {
 $(document).on("click", ".fecha", function () {
     $.ajax({
         type: "POST",
-        url: "./ajax/selects.ajax.php",
+        url: "../ajax/selects.ajax.php",
         datatype: "json",
         data: { fecha: "hola" },
       }).then(function (data) {
@@ -23,7 +23,7 @@ $("#frmfecha").submit(function (event) {
   event.preventDefault();
   var datos = $(this).serialize();
   $.ajax({
-            url: './ajax/certificado.ajax.php',
+            url: '../ajax/certificado.ajax.php',
             type: 'POST',
             data: datos,
             success: function(data) {
