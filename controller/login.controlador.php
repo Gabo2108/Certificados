@@ -8,7 +8,6 @@ class LoginControlador extends LoginModelo
 {
 	public function CtrIniciarSession() 
 	{
-		
 		$usuario = mainModel::limpiar_cadena($_POST['user']);
 		$password = mainModel::limpiar_cadena($_POST['pass']);
 		$datosLogin = ["usuario" => $usuario, "password" => $password];
@@ -25,7 +24,6 @@ class LoginControlador extends LoginModelo
 		}else{
 			echo '<script> Swal.fire("Error", "Credenciales Incorrectas!", "warning");</script>';
 			}
-			
 	}
 
 	public function CtrCerrarSession()
